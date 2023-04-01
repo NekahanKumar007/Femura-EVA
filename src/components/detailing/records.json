@@ -5,8 +5,8 @@
         "type":"painkillers",
         "image": "images/3TONE-TC-SYRUP.jpg",
         "followImage": [{
-            "image":"images/ELCIDE-O-SYRUP.jpg"},
-            {"image":"images/ERAPOD-TABS.jpg"}
+            "image":"images/ELCIDE-O-SYRUP.jpg"}
+            
         ]
 
     },

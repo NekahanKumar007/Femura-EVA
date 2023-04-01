@@ -15,12 +15,12 @@ function App() {
     return (
 
       <Routes>
-      <Route element={<ProtectedRoutes />}>
+      {/* <Route element={<ProtectedRoutes />}> */}
         <Route path="/" element={<Detailing />} />
         {/* <Route path="/dashboard" element={<Dashboard />} /> */}
         <Route path="/detailing" element={<Detailing />} />
         <Route path="/sidebar" element={<Sidebar />} />
-      </Route>
+      {/* </Route> */}
     </Routes>
 
     )

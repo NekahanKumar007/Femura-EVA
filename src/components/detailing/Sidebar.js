@@ -6,8 +6,16 @@ import RecordsFile from "./records.json";
  import MoreFactsButton from './moreFacts';
  import "rsuite/dist/rsuite.min.css";
 import Scrollbar from 'react-scrollbar'
+import { NavLink } from "react-router-dom";
 
  const Sidebar = () => {
+  const menuItem=[
+    {
+      path:"/detailing",
+      icon:<BsArrowLeftShort/>
+  }
+  ]
+
   const [fileName, setFileName] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [subImages, setSubImages] = useState('');
@@ -65,17 +73,29 @@ let productType = uniqueType.map(name => ({'value':name, 'label':name}));
 
 
     return (
-      <div className="flex  h">
+      <div className="flex">
      
   <div
-          className={`bg-dark-blue h-screen top-0 left-0 max-h-280 p-5 pt-8 overflow-y-scroll ${
+          className={`bg-dark-blue h-screen h-full top-0 left-0 max-h-280 p-5 pt-8 overflow-y-scroll no-scrollbar ${
             open ? "w-64" : "w-20"
           } duration-700 `}
         >
-
-<div className="inline-flex ">
+        <div className="inline-flex pt-2 ">
+        {
+                   menuItem.map((item, index)=>(
+                       <NavLink to={item.path} key={index}>
+                           <div className=" bg-white text-dark-purple text-3xl rounded-full absolute  top-4 border border-dark-purple cursor-pointer">{item.icon}</div>
+                       </NavLink>
+                   ))
+               }
+        {/* <NavLink path="/detailing">
+        <BsArrowLeftShort
+            className=" bg-white text-dark-purple text-3xl rounded-full absolute right-2 top-9 border border-dark-purple cursor-pointer"
+          />
+          </NavLink> */}
+<div className="inline-flex pt-6 ">
 <GoThreeBars
-              className={`bg-amber-300 text-4xl rounded cursor-pointer block float-left py-2 mr-2 duration-700 ${
+              className={`bg-amber-300 text-4xl rounded cursor-pointer block -right-2 py-2 mr-2 duration-700 ${
                 open && "rotate-[360deg]"
               }`} onClick={() => setOpen(!open)}
             />
@@ -87,6 +107,7 @@ let productType = uniqueType.map(name => ({'value':name, 'label':name}));
               {" "}
               <b> FEMURA </b>
             </h1>
+</div>
 </div>
             {/* For DropDown */}
 

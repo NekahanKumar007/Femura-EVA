@@ -146,7 +146,7 @@ let id=0;
 </ul>
 
 <div className='flex h-screen '>
-<ul className='grid grid-cols-5 gap-x-4 pt-3 mt-4 h-80 pb-20 rounded-md  cursor-pointer overflow-x-hidden'  >
+<ul className='grid grid-cols-5 gap-x-4 pt-3 mt-4 h-100 pb-20 rounded-md  cursor-pointer overflow-x-hidden'  >
 
             {products &&
               products.map((record) => {

@@ -52,11 +52,11 @@ const MoreFactsButton = () => {
       >
         <div className="text-center ">
           <h2 className="text-2xl font-bold mb-4">More Facts</h2>
-         <div className=' flex flex-row gap-x-2 '>
+         <div className=' grid grid-cols-1 gap-x-2 '>
           {Records.followImage &&
             Records.followImage.map((record) => {
                 return (
-          <img src={record.image} alt=""  className="h-60 w-90 border-double border-4 border-pink" />
+          <img src={record.image} alt=""  className="h-100 w-75 border-double border-4 border-pink" />
                 );
         })}
         </div>

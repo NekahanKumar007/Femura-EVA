@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
  import { BsArrowLeftShort,  } from "react-icons/bs";
- import Footer from "../Footer";
+//  import Footer from "../Footer";
  import { AiFillEnvironment } from "react-icons/ai";
- import { RiDashboardFill } from "react-icons/ri";
- import { MdQuiz } from "react-icons/md";
+//  import { RiDashboardFill } from "react-icons/ri";
+//  import { MdQuiz } from "react-icons/md";
  import { TbListDetails } from "react-icons/tb";
  import { BiLogOut } from "react-icons/bi";
  import "rsuite/dist/rsuite.min.css";
@@ -29,12 +29,12 @@ import { BrowserRouter, Routes, Route,} from "react-router-dom";
             name:"Detailing",
             icon:<TbListDetails/>
         }
-    //     {
-    //         path:"/quiz",
-    //         name:"Quiz",
-    //         icon:<MdQuiz/>
-    //     }
-     ]
+        // {
+        //     path:"/quiz",
+        //     name:"Quiz",
+        //     icon:<MdQuiz/>
+        // }
+    ]
 
     return (
 
@@ -55,7 +55,7 @@ import { BrowserRouter, Routes, Route,} from "react-router-dom";
           />
           
 
-           <div className="inline-flex" >
+        
 
            <AiFillEnvironment
               className={`bg-amber-300 text-4xl rounder cursor-pointer block float-left py-2 mr-2 duration-500 ${
@@ -91,7 +91,7 @@ import { BrowserRouter, Routes, Route,} from "react-router-dom";
   </div>
 
        
-        </div>
+   
       
     );
  }
