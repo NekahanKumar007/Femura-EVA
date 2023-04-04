@@ -4,6 +4,7 @@ import Sidebar from '../detailing/Sidebar';
 import Sidebar1 from './Sidebar1';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css'
+
 // import axios from "axios";
 // import Select from 'react-select'
 // import classNames from 'classnames';
@@ -129,13 +130,13 @@ let id=0;
 {/* <h6 className='text-black position bg-skin w-full py-2'>Select product for detailing</h6> */}
 </div>
 <ul className='pt-1 inline-flex gap-x-4' >
-<li className="text-white rounded-md mt-2" >
+<li className="text-white rounded-md mt-2 cursor-pointer" >
 <span className="bg-dark-blue hover:bg-pink hover:text-black rounded-md py-2 focus:outline-none text-base p-12 font-medium flex-1" onClick={productTypeSelect} >All</span>
 </li>
 {productType &&
   productType.map((record) => {
                 return (
-<li  className="text-white rounded-md mt-2 ">
+<li className="text-white rounded-md mt-2 cursor-pointer">
             
 
                 <span className="bg-dark-blue hover:bg-pink hover:text-black rounded-md py-2 focus:outline-none text-base p-12 font-medium flex-1" value={record.value} onClick={productTypeSelect} >{record.value}</span>
@@ -146,7 +147,7 @@ let id=0;
 </ul>
 
 <div className='flex h-screen '>
-<ul className='grid grid-cols-5 gap-x-4 pt-3 mt-4 h-100 pb-20 rounded-md  cursor-pointer overflow-x-hidden'  >
+<ul className='grid grid-cols-5 gap-x-4 pt-3 mt-4 h-100 pb-20 rounded-md cursor-pointer overflow-x-hidden'  >
 
             {products &&
               products.map((record) => {
@@ -161,7 +162,7 @@ let id=0;
 </div>
 </div>
 
-<footer className="fixed bg-gray-700 bottom-0 w-full flex flex-nowrap">
+<footer className="fixed bg-gray-500 bottom-0 w-full flex flex-nowrap">
 {/* bg-gray-400 text-black py-1 fixed bottom-0 w-full  */}
 <p className="text-white text-align-right px-4 pt-6 text-black ">Selected Items</p>
 <div>

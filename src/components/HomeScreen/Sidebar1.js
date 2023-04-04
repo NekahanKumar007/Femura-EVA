@@ -89,9 +89,6 @@ import { BrowserRouter, Routes, Route,} from "react-router-dom";
 </div>
          </div>              
   </div>
-
-       
-   
       
     );
  }

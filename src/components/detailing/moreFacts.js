@@ -28,9 +28,32 @@ const MoreFactsButton = () => {
   // Define a state variable to track whether the modal is open
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  function validateAndReturnImages(images){
+    console.log('records', images)
+    if (images == null) {
+      return [];
+    }
+    else if (images == "undefined") {
+      console.log('condiotion2')
+      return [];
+    }
+    else if (images == undefined) {
+      console.log('condiotion2')
+      return [];
+    }
+    else{
+      console.log('condiotion3')
+      return JSON.parse(window.sessionStorage.getItem("subImages"));
+    }
+   }
 
- let Records = window.sessionStorage.getItem("subImages") == null ? [] :JSON.parse(window.sessionStorage.getItem("subImages"));
-    console.log('sub',Records.followImage);
+  let Records =validateAndReturnImages(window.sessionStorage.getItem("subImages"))
+    
+
+   console.log('records', Records)
+
+  
+ 
   // Define a function to handle clicking the "More Facts" button
   const handleButtonClick = () => {
     setModalIsOpen(true);
@@ -52,11 +75,11 @@ const MoreFactsButton = () => {
       >
         <div className="text-center ">
           <h2 className="text-2xl font-bold mb-4">More Facts</h2>
-         <div className=' grid grid-cols-1 gap-x-2 '>
+         <div className=' grid grid-cols-2 gap-x-2 '>
           {Records.followImage &&
             Records.followImage.map((record) => {
                 return (
-          <img src={record.image} alt=""  className="h-100 w-75 border-double border-4 border-pink" />
+          <img src={record.image} alt=""  className="h-80 w-75 border-double border-4 border-pink" />
                 );
         })}
         </div>
