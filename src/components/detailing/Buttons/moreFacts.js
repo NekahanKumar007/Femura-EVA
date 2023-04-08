@@ -60,10 +60,10 @@ const MoreFactsButton = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="absolute">
       <button
         onClick={handleButtonClick}
-        className="p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+     
       >
         <HiInformationCircle size={40} />
       </button>

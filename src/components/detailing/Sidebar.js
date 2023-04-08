@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
- import { BsArrowLeftShort,  } from "react-icons/bs";
+ import { BsArrowLeftShort, BsThreeDots,  } from "react-icons/bs";
+
  import { BsChevronCompactLeft, BsChevronCompactRight  } from "react-icons/bs";
 import RecordsFile from "./records.json";
- import MoreFactsButton from './moreFacts';
+//  import MoreFactsButton from './Buttons/moreFacts';
+//  import ShareButton from './Buttons/share';
  import "rsuite/dist/rsuite.min.css";
 import { NavLink } from "react-router-dom";
 import { TbArrowBackUp  } from "react-icons/tb";
-import { Carousel } from 'react-responsive-carousel';
+import ThreeDots from './Buttons/threeDots'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
  const Sidebar = () => {
   const menuItem=[
@@ -19,6 +21,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
   const [fileName, setFileName] = useState(''); // image location
   const [productId, setProductId] = useState(''); // image/productid
   const [selectedOption, setSelectedOption] = useState('');
+  const [publicLink, setPubliclink] = useState('');
 
 let Records = JSON.parse(window.sessionStorage.getItem("selectedImages"));
   //window.sessionStorage.removeItem("selectedImages");
@@ -87,6 +90,7 @@ function setSubImages(product){
   //setSubImages(images)
  console.log(images);
  window.sessionStorage.setItem("subImages", JSON.stringify(images));
+ setPubliclink(images.link)
 }
 
 function findPrevious(){
@@ -124,6 +128,8 @@ function findNext(){
     setSubImages(nextObj.id);
   }
 }
+
+
 
 return (
 <>
@@ -196,9 +202,9 @@ return (
                <div>
                 <BsChevronCompactRight className="absolute -translate-x-0 translate-y-[50%] my-[360px] right-[60px] text-4xl rounded-full p-2 bg-black/30 text-white cursor-pointer"  onClick={findNext}/>
                </div>
-              
-           <MoreFactsButton  />
-         
+             
+               <ThreeDots/>
+
          </div>
                
 </div>

@@ -5,10 +5,9 @@
         "type":"painkillers",
         "image": "images/3TONE-TC-SYRUP.jpg",
         "followImage": [{
-            "image":"images/ELCIDE-O-SYRUP.jpg"}
-            
-        ]
-
+            "image":"images/ELCIDE-O-SYRUP.jpg"}      
+        ],
+        "link": "https://webikind.net/p/embiotic/elpevaimages/3TONE-TC-SYRUP.jpg"
     },
 
     {
