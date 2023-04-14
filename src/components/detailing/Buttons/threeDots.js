@@ -3,11 +3,11 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import Modal from 'react-modal';
 import { HiInformationCircle } from 'react-icons/hi';
 // import ShareButton from "./share";
-
 import { FaWhatsapp } from 'react-icons/fa';
 import { FiMail, FiShare2 } from 'react-icons/fi';
-// import { QRCode } from 'react-qrcode-logo';
+//  import { QRCode } from 'react-qrcode-logo';
 import { useLocation } from 'react-router-dom';
+import axios from "axios";
 
 //custom style for modal
 
@@ -85,12 +85,47 @@ const MoreFactsButton = () => {
      const url = `whatsapp://send?text=${encodeURIComponent(location.href)}`;
      window.location.href = url;
    };
+
+   const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    var bodyFormData = new FormData();
+    bodyFormData.append('sendEmailAPI', 'true');
+    bodyFormData.append('apiauth', 'J3LX8NGi7UiKbbR8Jea9VBcH5r5W2qBSTasu7J2j');
+    bodyFormData.append('toEmail', email);
+    bodyFormData.append('fromEmail', 'emailservice@pharmit.live');
+    bodyFormData.append('fromName', 'PharmIT');
+    bodyFormData.append('emailSub', 'subject');
+    bodyFormData.append('replyTo', 'emailservice@pharmit.live');
+    bodyFormData.append('replyToName', 'PharmIT');
+
+    axios.post('https://apcogsys.com/emailservice/email-api.php', { bodyFormData })
+      .then((response) => {
+        console.log(response);
+        setEmail('');
+        setShowModal(false);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
  
-   const handleEmailClick = () => {
-     const subject = 'Check out this link';
-     const body = `Hey,\n\nI thought you might be interested in this:\n\n${location.href}`;
-     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-   };
+//    const handleEmailClick = () => {
+//     var bodyFormData = new FormData();
+//     bodyFormData.append('sendEmailAPI', 'true');
+//     bodyFormData.append('apiauth', 'J3LX8NGi7UiKbbR8Jea9VBcH5r5W2qBSTasu7J2j');
+//     bodyFormData.append('toEmail', '');
+//     bodyFormData.append('apiauth', 'J3LX8NGi7UiKbbR8Jea9VBcH5r5W2qBSTasu7J2j');
+//     bodyFormData.append('apiauth', 'J3LX8NGi7UiKbbR8Jea9VBcH5r5W2qBSTasu7J2j');
+//     bodyFormData.append('apiauth', 'J3LX8NGi7UiKbbR8Jea9VBcH5r5W2qBSTasu7J2j');
+
+//    };
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
@@ -122,21 +157,41 @@ const MoreFactsButton = () => {
               logoHeight={48}
             /> */}
           </div>
-          {/* <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <button onClick={handleWhatsAppClick} className="px-4 py-2 mb-2 text-sm font-medium text-white bg-green-500 rounded-md">
               <FaWhatsapp size={20} className="mr-2" />
               
             </button>
-            <button onClick={handleEmailClick} className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md">
-              <FiMail size={20} className="mr-2" />
-              
+            <button onClick={() => setShowModal(true)} className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md">
+              <FiMail size={20} className="mr-2" />         
             </button>
-          </div> */}
+            {showModal && (
+        <div className="modal ">
+          <div className="modal-content mt-4">
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="email-input"><b>Email</b></label>
+              <input
+                id="email-input"
+                type="email"
+                value={email}
+                onChange={handleEmailChange}
+                className="py-2 px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Enter email"
+              />
+              <div className="pt-2">
+              <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" >Send</button>
+              <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" onClick={() => setShowModal(false)}>Cancel</button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
-      {/* <button onClick={handleShareClick} className="p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          </div>
+        </div>
+      )}
+      <button onClick={handleShareClick} className="p-4 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
         <FiShare2 size={30} />
-      </button> */}
+      </button>
 
           </button>
 
@@ -155,7 +210,7 @@ const MoreFactsButton = () => {
       >
         <div className="text-center ">
           <h2 className="text-2xl font-bold mb-4">More Facts</h2>
-         <div className=' flex gap-x-2 '>
+         <div className=' grid grid-cols-2 gap-x-2 '>
           {Records.followImage &&
             Records.followImage.map((record) => {
                 return (

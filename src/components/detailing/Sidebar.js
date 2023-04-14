@@ -88,7 +88,7 @@ let productType = uniqueType.map(name => ({'value':name, 'label':name}));
 function setSubImages(product){
   let images = RecordsFile.find(obj => obj.id == product);
   //setSubImages(images)
- console.log(images);
+//  console.log(images);
  window.sessionStorage.setItem("subImages", JSON.stringify(images));
  setPubliclink(images.link)
 }
@@ -103,7 +103,7 @@ function findPrevious(){
     }
   }
   //setSubImages();
-  console.log(previousObj)
+  // console.log(previousObj)
 
   if(previousObj){
     setFileName(previousObj.image); // for displaying image
@@ -121,7 +121,7 @@ function findNext(){
       break;
     }
   }
-  console.log(nextObj)
+  // console.log(nextObj)
   if(nextObj){
     setFileName(nextObj.image); // for displaying image
     setProductId(nextObj.id);

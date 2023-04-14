@@ -2,6 +2,7 @@
     {
         "id": 1,
         "product":"3TONE-TC-SYRUP",
+        "group": "3TONE",
         "type":"painkillers",
         "image": "images/3TONE-TC-SYRUP.jpg",
         "followImage": [{
@@ -13,19 +14,22 @@
     {
         "id": 2,
         "product":"ANTI-CC-SYRUP",
+        "group": "3TONE",
         "type":"painkillers",
         "image": "images/ANTI-CC-TABS.jpg",
         "followImage": [{
             "image":"images/3TONE-TC-SYRUP.jpg"},
             {"image":"images/ANTI-CC-TABS.jpg"},
             {"image": "images/ELPICOX-TABS.jpg"}
-        ]
+        ],
+        "link": "https://webikind.net/p/embiotic/elpevaimages/ANTI-CC-SYRUP.jpg"
     },
 
     {
         "id": 3,
         "product":"ANTIFLAM-AQ",
         "type":"painkillers",
+        "group": "3TONE",
         "image": "images/ANTIFLAM-AQ.jpg",
         "followImage": [{
             "image":"images/3TONE-TC-SYRUP.jpg"},
@@ -37,6 +41,7 @@
         "id": 4,
         "product":"CARISPOR-TABS",
         "type":"painkillers",
+        "group": "",
         "image": "images/CARISPOR-TABS.jpg",
         "followImage": [{
             "image":"images/3TONE-TC-SYRUP.jpg"},
@@ -49,6 +54,7 @@
         "id": 5,
         "product":"DOLIDE-COLD-TABS",
         "type":"painkillers",
+        "group": "3TONE",
         "image": "images/DOLIDE-COLD-TABS.jpg",
         "followImage": [{
             "image":"images/3TONE-TC-SYRUP.jpg"},
@@ -60,6 +66,7 @@
     {
         "id": 6,
         "product":"DOLIDE-SYRUP",
+        "group": "",
         "type":"painkillers",
         "image": "images/DOLIDE-SYRUP.jpg"
 
@@ -68,6 +75,7 @@
     {
         "id": 7,
         "product":"DOLIDE-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/DOLIDE-TABS.jpg"
 
@@ -76,6 +84,7 @@
     {
         "id": 8,
         "product":"DOLORIN-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/DOLORIN-TABS.jpg"
 
@@ -84,6 +93,7 @@
     {
         "id": 9,
         "product":"DYLOCK-LB-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/DYLOCK-LB-TABS.jpg"
 
@@ -92,6 +102,7 @@
     {
         "id": 10,
         "product":"ELCIDE-O-SYRUP",
+        "group": "",
         "type":"painkillers",
         "image": "images/ELCIDE-O-SYRUP.jpg"
 
@@ -100,6 +111,7 @@
     {
         "id": 11,
         "product":"ELCIDE-TABS",
+        "group": "ELCIDE",
         "type":"painkillers",
         "image": "images/ELCIDE-TABS.jpg"
 
@@ -108,6 +120,7 @@
     {
         "id": 12,
         "product":"ELIVIT-M-TABS",
+        "group": "ELCIDE",
         "type":"painkillers",
         "image": "images/ELIVIT-M-TABS.jpg"
 
@@ -116,6 +129,7 @@
     {
         "id": 13,
         "product":"ELPICOX-TABS",
+        "group": "ELCIDE",
         "type":"painkillers",
         "image": "images/ELPICOX-TABS.jpg"
 
@@ -124,6 +138,7 @@
     {
         "id": 14,
         "product":"ELPIP-TZ-TABS",
+        "group": "ELCIDE",
         "type":"painkillers",
         "image": "images/ELPIP-TZ-TABS.jpg"
 
@@ -132,6 +147,7 @@
     {
         "id": 15,
         "product":"ELPIZ-50-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/ELPIZ-50-TABS.jpg"
 
@@ -140,6 +156,7 @@
     {
         "id": 16,
         "product":"EMFLAZ-TABS",
+        "group": "ELCIDE",
         "type":"painkillers",
         "image": "images/EMFLAZ-TABS.jpg"
 
@@ -148,6 +165,7 @@
     {
         "id": 17,
         "product":"EMTRIAXONE-INJECTION",
+        "group": "",
         "type":"painkillers",
         "image": "images/EMTRIAXONE-INJECTION.jpg"
 
@@ -156,6 +174,7 @@
     {
         "id": 18,
         "product":"ENERQUIK-POWERD",
+        "group": "",
         "type":"painkillers",
         "image": "images/ENERQUIK-POWERD.jpg"
 
@@ -164,6 +183,7 @@
     {
         "id": 19,
         "product":"ERAPOD-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/ERAPOD-TABS.jpg"
 
@@ -172,6 +192,7 @@
     {
         "id": 20,
         "product":"ERAZITH-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/ERAZITH-TABS.jpg"
 
@@ -180,6 +201,7 @@
     {
         "id": 21,
         "product":"HAEMIRON-SYRUP",
+        "group": "",
         "type":"syrup",
         "image": "images/HAEMIRON-SYRUP.jpg"
 
@@ -188,6 +210,7 @@
     {
         "id": 22,
         "product":"HAEMIRON-XT-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/HAEMIRON-XT-TABS.jpg"
 
@@ -196,6 +219,7 @@
     {
         "id": 23,
         "product":"MUCINE-X",
+        "group": "",
         "type":"painkillers",
         "image": "images/MUCINE-X.jpg"
 
@@ -204,6 +228,7 @@
     {
         "id": 24,
         "product":"MUCORIN-TABS",
+        "group": "",
         "type":"painkicoldllers",
         "image": "images/MUCORIN-TABS.jpg"
 
@@ -212,6 +237,7 @@
     {
         "id": 25,
         "product":"NOTEL-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/NOTEL-TABS.jpg"
 
@@ -220,6 +246,7 @@
     {
         "id": 26,
         "product":"NUCONAZOLE",
+        "group": "",
         "type":"painkillers",
         "image": "images/NUCONAZOLE.jpg"
 
@@ -228,6 +255,7 @@
     {
         "id": 27,
         "product":"OFX",
+        "group": "",
         "type":"cold",
         "image": "images/OFX.jpg"
 
@@ -236,6 +264,7 @@
     {
         "id": 28,
         "product":"OMNICAL-D3-TABS",
+        "group": "",
         "type":"painkicoldllers",
         "image": "images/OMNICAL-D3-TABS.jpg"
 
@@ -244,6 +273,7 @@
     {
         "id": 29,
         "product":"OMNICAL-K2+",
+        "group": "",
         "type":"syrup",
         "image": "images/OMNICAL-K2+.jpg"
 
@@ -252,6 +282,7 @@
     {
         "id": 30,
         "product":"OROMOL-ADULTS-TABS",
+        "group": "",
         "type":"syrup",
         "image": "images/OROMOL-ADULTS-TABS.jpg"
 
@@ -260,6 +291,7 @@
     {
         "id": 31,
         "product":"OROMOL-KIDS-SYRUP",
+        "group": "",
         "type":"syrup",
         "image": "images/OROMOL-KIDS-SYRUP.jpg"
 
@@ -268,6 +300,7 @@
     {
         "id": 32,
         "product":"ORONAC",
+        "group": "",
         "type":"painkillers",
         "image": "images/ORONAC.jpg"
 
@@ -276,6 +309,7 @@
     {
         "id": 33,
         "product":"SEDOREX-DX",
+        "group": "",
         "type":"painkillers",
         "image": "images/SEDOREX-DX.jpg"
 
@@ -284,6 +318,7 @@
     {
         "id": 34,
         "product":"SYNARIN",
+        "group": "",
         "type":"cold",
         "image": "images/SYNARIN.jpg"
 
@@ -292,6 +327,7 @@
     {
         "id": 35,
         "product":"TRIVDO-Z",
+        "group": "",
         "type":"painkicoldllers",
         "image": "images/TRIVDO-Z.jpg"
 
@@ -300,6 +336,7 @@
     {
         "id": 36,
         "product":"TWOCEF",
+        "group": "",
         "type":"painkicoldllers",
         "image": "images/TWOCEF.jpg"
 
@@ -308,6 +345,7 @@
     {
         "id": 37,
         "product":"ULTIFIX-CV-SYRUP",
+        "group": "",
         "type":"painkillers",
         "image": "images/ULTIFIX-CV-SYRUP.jpg"
 
@@ -316,6 +354,7 @@
     {
         "id": 38,
         "product":"ULTIFIX-CV-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/ULTIFIX-CV-TABS.jpg"
 
@@ -324,6 +363,7 @@
     {
         "id": 39,
         "product":"ULTIFIX-KIDS",
+        "group": "",
         "type":"painkillers",
         "image": "images/ULTIFIX-KIDS.jpg"
 
@@ -332,6 +372,7 @@
     {
         "id": 40,
         "product":"ULTIFIX-TABS",
+        "group": "",
         "type":"cold",
         "image": "images/ULTIFIX-TABS.jpg"
 
@@ -340,6 +381,7 @@
     {
         "id": 41,
         "product":"ULTIKOF-SYRUP",
+        "group": "",
         "type":"cold",
         "image": "images/ULTIKOF-SYRUP.jpg"
 
@@ -348,6 +390,7 @@
     {
         "id": 42,
         "product":"VITACIT-Z-TABS",
+        "group": "",
         "type":"painkillers",
         "image": "images/VITACIT-Z-TABS.jpg"
 
